@@ -3,7 +3,7 @@
 > [!NOTE]
 > **Personal Side Project:** This repository is a personal side project designed to build and showcase a sample, fully functional end-to-end modern data stack pipeline. It simulates how marketing attribution and ROAS (Return on Ad Spend) calculation pipelines are architected in production environments.
 
-This pipeline leverages **dbt Core**, **BigQuery**, and **Looker Studio**, following the **Medallion (Staging -> Intermediate -> Marts)** model design to emphasize performance optimization, data security (PII hashing), and quality controls.
+This pipeline leverages **dbt Cloud**, **BigQuery**, and **Looker Studio**, following the **Medallion (Staging -> Intermediate -> Marts)** model design to emphasize performance optimization, data security (PII hashing), and quality controls.
 
 ## Project Architecture & Data Flow
 

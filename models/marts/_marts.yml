@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_daily_marketing_performance
+    description: "Incremental Marts model aggregating daily ad spend, impressions, clicks, orders, revenue, ROAS, and CAC by channel."
+    columns:
+      - name: performance_key
+        description: "Surrogate primary key (SHA256 of date and channel)."
+        tests:
+          - unique
+          - not_null
+      - name: date
+        description: "Aggregated performance date."
+      - name: channel
+        description: "Marketing channel (e.g., Facebook, Google)."
+      - name: total_spend
+        description: "Total advertising cost."
+      - name: attributed_revenue
+        description: "Attributed sales revenue."
+      - name: roas
+        description: "Return on Ad Spend (Attributed Revenue / Spend)."
+      - name: cac
+        description: "Customer Acquisition Cost (Spend / Total Orders)."

@@ -14,7 +14,8 @@ models:
       - name: status
         tests:
           - accepted_values:
-              values: ['completed', 'failed']
+              arguments:
+                values: ['completed', 'failed']
 
   - name: stg_fb_spend
     description: "Staged Facebook Ads daily spend."
@@ -37,5 +38,6 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('stg_orders')
-              field: order_id
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
